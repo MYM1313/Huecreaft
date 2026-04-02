@@ -148,10 +148,10 @@ const LuxuryFilter = ({ current, onSelect }: { current: string; onSelect: (cat: 
         <button
           key={cat}
           onClick={() => onSelect(cat)}
-          className={`relative px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.1em] transition-all duration-300 tap-interaction ${
+          className={`relative px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.1em] transition-all duration-200 tap-interaction border-x border-t border-b-4 ${
             current === cat 
-              ? 'text-white' 
-              : 'text-luxury-gray hover:text-luxury-blue-mid bg-white border border-luxury-divider hover:border-luxury-gold/30'
+              ? 'text-white bg-luxury-gold border-luxury-gold-deep/50 border-b-luxury-gold-deep hover:-translate-y-0.5 hover:border-b-[5px] active:translate-y-1 active:border-b-[1px]' 
+              : 'text-luxury-gray hover:text-luxury-blue-mid bg-white border-luxury-divider border-b-luxury-divider/50 hover:border-luxury-gold/30 hover:-translate-y-0.5 hover:border-b-[5px] active:translate-y-1 active:border-b-[1px]'
           }`}
         >
           {current === cat && (
@@ -207,7 +207,7 @@ const ProjectBlock: React.FC<{ project: Project; index: number }> = ({ project, 
           whileHover={{ y: -4, transition: { duration: 0.4, ease: "easeOut" } }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full mb-6 relative shadow-premium-md rounded-[1.5rem] overflow-hidden will-change-[opacity,transform]"
+          className="w-full mb-6 relative border-x border-t border-luxury-divider border-b-4 border-luxury-divider/50 rounded-[1.5rem] overflow-hidden will-change-[opacity,transform]"
         >
           <BeforeAfterSlider 
             beforeImage={project.before} 
@@ -387,10 +387,9 @@ const Projects = () => {
           className="mt-16 flex justify-center"
         >
           <motion.button
-            whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
             onClick={handleLoadMore}
-            className="group relative flex items-center justify-center gap-3 rounded-full bg-gradient-to-b from-luxury-blue-mid to-luxury-ink px-6 py-3.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition-all active:scale-95 inner-highlight overflow-hidden"
+            className="group relative flex items-center justify-center gap-3 rounded-full bg-gradient-to-b from-luxury-blue-mid to-luxury-ink px-6 py-3.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition-all duration-200 border-x border-t border-luxury-blue-soft/30 border-b-4 border-black/40 hover:-translate-y-0.5 hover:border-b-[5px] active:translate-y-1 active:border-b-[1px] inner-highlight overflow-hidden"
           >
             {/* Continuous Spark/Shimmer Effect */}
             <motion.div 
@@ -461,13 +460,13 @@ const Projects = () => {
                   <motion.div
                     whileHover={{ y: -8 }}
                     whileTap={{ scale: 0.98 }}
-                    className="relative aspect-square p-8 md:p-10 rounded-[2rem] bg-white border border-luxury-divider shadow-premium-md flex flex-col items-start justify-center text-left group transition-all duration-500 overflow-hidden h-full will-change-[transform,box-shadow]"
+                    className="relative aspect-square p-8 md:p-10 rounded-[2rem] bg-white border-x border-t border-luxury-divider border-b-4 border-luxury-divider/50 flex flex-col items-start justify-center text-left group transition-all duration-200 overflow-hidden h-full will-change-[transform]"
                   >
                     {/* Subtle Golden Gradient Background Layer */}
                     <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                     
                     {/* Premium Icon Container */}
-                    <div className="relative z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-luxury-blue-ultra shadow-premium-sm flex items-center justify-center mb-6 group-hover:shadow-premium-md group-hover:bg-white transition-all duration-500 border border-luxury-divider/20">
+                    <div className="relative z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-luxury-blue-ultra flex items-center justify-center mb-6 group-hover:bg-white transition-all duration-500 border border-luxury-divider/20">
                       <item.icon className="w-7 h-7 md:w-8 md:h-8 text-luxury-gold drop-shadow-sm" />
                       
                       {/* Subtle Glow */}

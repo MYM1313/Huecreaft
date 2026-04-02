@@ -206,7 +206,7 @@ const Home = () => {
                 className="font-serif text-[3rem] sm:text-7xl md:text-8xl lg:text-8xl font-bold tracking-tighter text-luxury-ink leading-[0.95] md:leading-[0.9] lg:leading-[0.85] will-change-[opacity,transform]"
               >
                 Elevating <br />
-                <span className="text-luxury-gold italic font-light drop-shadow-sm">Spaces.</span>
+                <span className="text-luxury-gold italic font-light">Spaces.</span>
               </motion.h1>
               
               {/* SUBTITLE - Simplified & Elegant */}
@@ -244,9 +244,6 @@ const Home = () => {
                   to="/request-proposal"
                   className="group relative flex items-center justify-center gap-4 rounded-full btn-premium-navy px-10 md:px-14 lg:px-16 py-4 md:py-5 lg:py-6 text-[10px] md:text-[11px] lg:text-xs font-bold uppercase tracking-[0.3em] overflow-hidden w-full max-w-md"
                 >
-                  {/* Sophisticated Glow */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-luxury-gold/30 via-transparent to-luxury-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-                  
                   {/* Refined Shine Effect */}
                   <motion.div 
                     animate={{ x: ['-150%', '250%'] }}
@@ -262,17 +259,16 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row items-center gap-4 lg:gap-6">
                 <motion.div
                   whileHover={{ 
-                    y: -10,
-                    rotateX: 15,
-                    scale: 1.05,
-                    transition: { duration: 0.4, ease: "easeOut" }
+                    y: -4,
+                    scale: 1.02,
+                    transition: { duration: 0.3, ease: "easeOut" }
                   }}
                   whileTap={{ scale: 0.98 }}
-                  className="perspective-1000 w-full sm:w-auto flex justify-center"
+                  className="w-full sm:w-auto flex justify-center"
                 >
                   <Link
                     to="/services"
-                    className="group relative flex items-center justify-center gap-4 rounded-full btn-premium-white-gold px-10 md:px-14 lg:px-16 py-4 md:py-5 lg:py-6 text-[10px] md:text-[11px] lg:text-xs font-bold uppercase tracking-[0.3em] overflow-hidden w-full max-w-md sm:max-w-none"
+                    className="group relative flex items-center justify-center gap-4 rounded-full bg-white border border-luxury-divider/40 text-luxury-ink px-10 md:px-14 lg:px-16 py-4 md:py-5 lg:py-6 text-[10px] md:text-[11px] lg:text-xs font-bold uppercase tracking-[0.3em] overflow-hidden w-full max-w-md sm:max-w-none hover:border-luxury-gold/30 hover:text-luxury-gold transition-all duration-300"
                   >
                     <span className="relative z-10">View Services</span>
                   </Link>
@@ -287,7 +283,7 @@ const Home = () => {
                     className="group relative flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-3 rounded-full bg-white border border-luxury-divider/40 text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-luxury-ink hover:border-luxury-gold/30 transition-all duration-300 overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-luxury-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="flex h-5 w-5 lg:h-6 lg:w-6 items-center justify-center rounded-full bg-luxury-blue-ultra text-luxury-gold shadow-inner">
+                    <div className="flex h-5 w-5 lg:h-6 lg:w-6 items-center justify-center rounded-full bg-luxury-blue-ultra text-luxury-gold">
                       <Phone className="h-2.5 w-2.5 lg:h-3 lg:w-3" />
                     </div>
                     <span className="relative z-10">Call</span>
@@ -305,7 +301,7 @@ const Home = () => {
                     className="group relative flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-3 rounded-full bg-white border border-luxury-divider/40 text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-luxury-ink hover:border-[#25D366]/30 transition-all duration-300 overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-[#25D366]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="flex h-5 w-5 lg:h-6 lg:w-6 items-center justify-center rounded-full bg-[#25D366]/10 text-[#25D366] shadow-inner">
+                    <div className="flex h-5 w-5 lg:h-6 lg:w-6 items-center justify-center rounded-full bg-[#25D366]/10 text-[#25D366]">
                       <MessageCircle className="h-3 w-3 lg:h-3.5 lg:w-3.5" />
                     </div>
                     <span className="relative z-10">WhatsApp</span>

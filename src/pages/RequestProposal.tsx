@@ -56,7 +56,7 @@ const RequestProposal = () => {
               
               <Link
                 to="/contact"
-                className="group inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-xl border border-luxury-divider px-10 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-ink transition-all duration-300 hover:border-luxury-gold hover:text-luxury-gold hover:-translate-y-1 bg-white active:scale-[0.97] tap-interaction"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-xl border-x border-t border-luxury-divider border-b-4 border-luxury-divider/50 px-10 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-ink transition-all duration-200 hover:border-luxury-gold hover:text-luxury-gold hover:-translate-y-0.5 hover:border-b-[5px] bg-white active:translate-y-1 active:border-b-[1px] tap-interaction"
               >
                 <Mail className="h-4 w-4" />
                 Contact Us

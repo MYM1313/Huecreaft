@@ -122,54 +122,60 @@
 }
 
 .btn-premium-navy {
-  @apply bg-gradient-to-r from-luxury-ink via-luxury-blue-mid to-luxury-ink text-white transition-all duration-500 hover:-translate-y-2 active:translate-y-0 border border-luxury-blue-soft/30;
-  animation: gradient 6s ease infinite, float-btn 4s ease-in-out infinite;
+  @apply bg-gradient-to-r from-luxury-ink via-luxury-blue-mid to-luxury-ink text-white transition-all duration-200 border-x border-t border-luxury-blue-soft/30 border-b-4 border-black/40;
+  animation: gradient 6s ease infinite;
   background-size: 200% 200%;
-  box-shadow: inset 0 1px 1px rgba(255,255,255,0.2);
+  box-shadow: none !important;
 }
 
 .btn-premium-navy:hover {
-  box-shadow: inset 0 1px 1px rgba(255,255,255,0.3);
+  @apply -translate-y-0.5 border-b-[5px];
+}
+
+.btn-premium-navy:active {
+  @apply translate-y-1 border-b-[1px];
 }
 
 .btn-premium-solid {
-  @apply bg-luxury-ink text-white transition-all duration-500 hover:-translate-y-2 active:translate-y-0 border border-luxury-blue-soft/30;
-  animation: float-btn 4s ease-in-out infinite;
-  box-shadow: inset 0 1px 1px rgba(255,255,255,0.2);
+  @apply bg-luxury-ink text-white transition-all duration-200 border-x border-t border-luxury-blue-soft/30 border-b-4 border-black/40;
+  box-shadow: none !important;
 }
 
 .btn-premium-solid:hover {
-  box-shadow: inset 0 1px 1px rgba(255,255,255,0.3);
+  @apply -translate-y-0.5 border-b-[5px];
+}
+
+.btn-premium-solid:active {
+  @apply translate-y-1 border-b-[1px];
 }
 
 .btn-premium-lighting {
-  @apply bg-luxury-ink text-white transition-all duration-500 border border-luxury-blue-soft/30;
+  @apply bg-luxury-ink text-white transition-all duration-200 border-x border-t border-luxury-blue-soft/30 border-b-4 border-black/40;
   animation: lighting-sweep 3s linear infinite;
   background-image: linear-gradient(110deg, transparent 40%, rgba(255,255,255,0.15) 50%, transparent 60%);
   background-size: 200% 100%;
-  box-shadow: inset 0 2px 0 rgba(255,255,255,0.15), inset 0 -4px 0 rgba(0,0,0,0.6);
-  transform: translateY(0);
+  box-shadow: none !important;
 }
 
 .btn-premium-lighting:hover {
-  box-shadow: inset 0 2px 0 rgba(255,255,255,0.25), inset 0 -4px 0 rgba(0,0,0,0.6);
-  transform: translateY(-2px);
+  @apply -translate-y-0.5 border-b-[5px];
 }
 
 .btn-premium-lighting:active {
-  box-shadow: inset 0 2px 0 rgba(255,255,255,0.1), inset 0 -1px 0 rgba(0,0,0,0.6);
-  transform: translateY(3px);
+  @apply translate-y-1 border-b-[1px];
 }
 
 .btn-premium-white-gold {
-  @apply bg-white text-luxury-ink transition-all duration-500 hover:-translate-y-2 active:translate-y-0 border border-luxury-gold/30;
-  animation: float-btn 4s ease-in-out infinite;
-  box-shadow: inset 0 1px 1px rgba(255,255,255,1);
+  @apply bg-white text-luxury-ink transition-all duration-200 border-x border-t border-luxury-gold/30 border-b-4 border-luxury-gold/50;
+  box-shadow: none !important;
 }
 
 .btn-premium-white-gold:hover {
-  @apply border-luxury-gold/50 text-luxury-gold;
-  box-shadow: inset 0 1px 1px rgba(255,255,255,1);
+  @apply -translate-y-0.5 border-b-[5px] text-luxury-gold;
+}
+
+.btn-premium-white-gold:active {
+  @apply translate-y-1 border-b-[1px];
 }
 
 @keyframes float-panel {

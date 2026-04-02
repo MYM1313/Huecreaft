@@ -126,12 +126,11 @@ export const ContactForm: React.FC = () => {
         />
 
         <motion.button
-          whileHover={{ y: -1 }}
           whileTap={{ scale: 0.98 }}
           disabled={isSubmitting}
           className={cn(
-            "w-full h-12 rounded-[18px] text-white font-bold text-[10px] uppercase tracking-[0.25em] transition-all duration-300 bg-blue-600 shadow-lg shadow-blue-600/20 flex items-center justify-center gap-2",
-            isSubmitting ? "cursor-progress opacity-80" : "hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/30"
+            "w-full h-12 rounded-[18px] text-white font-bold text-[10px] uppercase tracking-[0.25em] transition-all duration-200 bg-blue-600 flex items-center justify-center gap-2 border-x border-t border-blue-400/30 border-b-4 border-blue-800/50 active:translate-y-1 active:border-b-[1px]",
+            isSubmitting ? "cursor-progress opacity-80" : "hover:bg-blue-700 hover:-translate-y-0.5 hover:border-b-[5px]"
           )}
         >
           {isSubmitting ? (

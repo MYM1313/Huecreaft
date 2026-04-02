@@ -214,7 +214,7 @@ const About = () => {
               <motion.div
                 animate={{ y: [0, 20, 0] }}
                 transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-white border border-luxury-divider rounded-[2rem] shadow-premium-md z-10 flex items-center justify-center p-6 inner-highlight"
+                className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-white border-x border-t border-luxury-divider border-b-4 border-luxury-divider/50 rounded-[2rem] z-10 flex items-center justify-center p-6 inner-highlight"
               >
                 <div className="text-center">
                   <Award className="w-10 h-10 text-luxury-gold mx-auto mb-3" />
@@ -297,7 +297,7 @@ const About = () => {
               <FadeInWhenVisible key={item.title} delay={index * 0.1}>
                 <motion.div
                   whileHover={{ y: -5, scale: 1.02 }}
-                  className="group relative rounded-[3.5rem] overflow-hidden shadow-premium-md hover:shadow-premium-xl transition-all duration-500 h-[320px] md:h-[380px] flex flex-col justify-end"
+                  className="group relative rounded-[3.5rem] overflow-hidden border-x border-t border-luxury-divider border-b-4 border-luxury-divider/50 transition-all duration-200 hover:-translate-y-1 hover:border-b-[6px] h-[320px] md:h-[380px] flex flex-col justify-end"
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0">
@@ -441,13 +441,13 @@ const About = () => {
                   <motion.div
                     whileHover={{ y: -8 }}
                     whileTap={{ scale: 0.98 }}
-                    className="relative aspect-square p-8 md:p-10 rounded-[3rem] bg-white border border-luxury-divider shadow-premium-md flex flex-col items-start justify-center text-left group transition-all duration-500 overflow-hidden h-full will-change-[transform,box-shadow]"
+                    className="relative aspect-square p-8 md:p-10 rounded-[3rem] bg-white border-x border-t border-luxury-divider border-b-4 border-luxury-divider/50 flex flex-col items-start justify-center text-left group transition-all duration-200 overflow-hidden h-full will-change-[transform]"
                   >
                     {/* Subtle Golden Gradient Background Layer */}
                     <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                     
                     {/* Premium Icon Container */}
-                    <div className="relative z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-luxury-blue-ultra shadow-premium-sm flex items-center justify-center mb-6 group-hover:shadow-premium-md group-hover:bg-white transition-all duration-500 border border-luxury-divider/20">
+                    <div className="relative z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-luxury-blue-ultra flex items-center justify-center mb-6 group-hover:bg-white transition-all duration-500 border border-luxury-divider/20">
                       <item.icon className="w-7 h-7 md:w-8 md:h-8 text-luxury-gold drop-shadow-sm" />
                       
                       {/* Subtle Glow */}
@@ -495,7 +495,7 @@ const About = () => {
                 <div className="flex flex-wrap justify-center lg:justify-end gap-6 md:gap-10 w-full">
                   {certifications.map((cert) => (
                     <div key={cert.name} className="flex flex-col items-center gap-3 group/cert w-20">
-                      <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 shadow-premium-sm transition-all duration-500 group-hover/cert:shadow-premium-md group-hover/cert:-translate-y-2 group-hover/cert:border-luxury-gold/30 relative overflow-hidden">
+                      <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 transition-all duration-500 group-hover/cert:-translate-y-1 group-hover/cert:border-luxury-gold/30 relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold/5 to-transparent opacity-0 group-hover/cert:opacity-100 transition-opacity duration-500" />
                         <cert.icon className="w-6 h-6 text-white group-hover/cert:text-luxury-gold transition-colors relative z-10" strokeWidth={1.5} />
                       </div>

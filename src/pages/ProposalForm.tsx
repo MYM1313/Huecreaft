@@ -802,27 +802,6 @@ Notes: ${data.notes || 'None'}
           </>
           )}
         </AnimatePresence>
-
-        {/* SUPPORT SECTION - More compact */}
-        {!isSuccess && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="mt-8 max-w-sm mx-auto px-4"
-          >
-            <div className="bg-white/40 backdrop-blur-md rounded-2xl p-4 border border-luxury-divider/10 shadow-premium-sm text-center">
-              <h3 className="text-[10px] font-bold text-luxury-ink mb-0.5">Need assistance?</h3>
-              <p className="text-[9px] text-luxury-gray font-light mb-3">Our team can guide you step-by-step.</p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center px-4 py-1.5 rounded-lg border border-luxury-divider/40 text-[7px] font-bold uppercase tracking-widest text-luxury-ink hover:border-luxury-gold hover:text-luxury-gold transition-all"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </motion.div>
-        )}
       </div>
     </div>
   );

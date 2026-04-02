@@ -100,8 +100,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                       to={item.path}
                       onClick={onClose}
                       className={cn(
-                        "group relative flex items-center gap-4 p-4 rounded-[2rem] bg-white border border-luxury-divider transition-all duration-300",
-                        "hover:bg-luxury-blue-ultra hover:border-luxury-gold/20",
+                        "group relative flex items-center gap-4 p-4 rounded-[2rem] bg-white border-x border-t border-luxury-divider border-b-4 border-luxury-divider/50 transition-all duration-200",
+                        "hover:bg-luxury-blue-ultra hover:border-luxury-gold/20 hover:-translate-y-0.5 hover:border-b-[5px] active:translate-y-1 active:border-b-[1px]",
                         isActive && "border-luxury-gold/30 bg-luxury-blue-ultra"
                       )}
                     >

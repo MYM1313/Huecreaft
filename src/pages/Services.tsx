@@ -117,7 +117,7 @@ const ServiceCarousel = ({ images, title }: { images: string[], title: string })
   };
 
   return (
-    <div className="relative aspect-[4/3] overflow-hidden rounded-[2.5rem] shadow-premium-lg group touch-pan-y border border-luxury-divider inner-highlight-dark bg-white">
+    <div className="relative aspect-[4/3] overflow-hidden rounded-[2.5rem] border-x border-t border-luxury-divider border-b-4 border-luxury-divider/50 group touch-pan-y inner-highlight-dark bg-white">
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           key={currentIndex}
@@ -184,7 +184,7 @@ const ServiceCarousel = ({ images, title }: { images: string[], title: string })
                 transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
                 className="mb-3"
               >
-                <span className="text-[9px] font-bold uppercase tracking-[0.4em] text-luxury-blue-mid bg-white px-5 py-2 rounded-full border border-luxury-divider shadow-premium-sm inner-highlight">
+                <span className="text-[9px] font-bold uppercase tracking-[0.4em] text-luxury-blue-mid bg-white px-5 py-2 rounded-full border-x border-t border-luxury-divider border-b-2 border-luxury-divider/50 inner-highlight">
                   Our Expertise
                 </span>
               </motion.div>

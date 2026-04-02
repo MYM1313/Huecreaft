@@ -256,7 +256,7 @@ const Home = () => {
                 </Link>
               </motion.div>
 
-              <div className="flex flex-col sm:flex-row items-center gap-4 lg:gap-6">
+              <div className="flex flex-col items-center gap-4 lg:gap-6">
                 <motion.div
                   whileHover={{ 
                     y: -4,
@@ -274,13 +274,13 @@ const Home = () => {
                   </Link>
                 </motion.div>
 
-                {/* Quick Contact Inline Buttons - Positioned Higher */}
-                <div className="flex items-center gap-3 lg:gap-4">
+                {/* Quick Contact Inline Buttons - Positioned Below View Services */}
+                <div className="flex items-center justify-center gap-3 lg:gap-4">
                   <motion.a
                     href="tel:+15558882424"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group relative flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-3 rounded-full bg-white border border-luxury-divider/40 text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-luxury-ink hover:border-luxury-gold/30 transition-all duration-300 overflow-hidden"
+                    className="group relative flex items-center justify-center gap-2 px-4 py-2 lg:px-6 lg:py-3 rounded-full bg-white border border-luxury-divider/40 text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-luxury-ink hover:border-luxury-gold/30 transition-all duration-300 overflow-hidden w-32 lg:w-40"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-luxury-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="flex h-5 w-5 lg:h-6 lg:w-6 items-center justify-center rounded-full bg-luxury-blue-ultra text-luxury-gold">
@@ -298,7 +298,7 @@ const Home = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group relative flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-3 rounded-full bg-white border border-luxury-divider/40 text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-luxury-ink hover:border-[#25D366]/30 transition-all duration-300 overflow-hidden"
+                    className="group relative flex items-center justify-center gap-2 px-4 py-2 lg:px-6 lg:py-3 rounded-full bg-white border border-luxury-divider/40 text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-luxury-ink hover:border-[#25D366]/30 transition-all duration-300 overflow-hidden w-32 lg:w-40"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-[#25D366]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="flex h-5 w-5 lg:h-6 lg:w-6 items-center justify-center rounded-full bg-[#25D366]/10 text-[#25D366]">

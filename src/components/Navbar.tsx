@@ -78,7 +78,7 @@ const Navbar = () => {
                   whileHover={{ y: -1, transition: { duration: 0.3, ease: "easeOut" } }}
                   className="flex flex-col items-center"
                 >
-                  <span className="text-2xl lg:text-3xl xl:text-4xl font-serif font-black tracking-[0.25em] text-luxury-blue-mid uppercase leading-none transition-colors duration-300 group-hover:text-luxury-gold">
+                  <span className="text-3xl lg:text-4xl xl:text-5xl font-serif font-black tracking-[0.25em] text-luxury-blue-mid uppercase leading-none transition-colors duration-300 group-hover:text-luxury-gold">
                     HUECRAFT
                   </span>
                 </motion.div>
@@ -92,7 +92,7 @@ const Navbar = () => {
                   whileHover={{ y: -1, transition: { duration: 0.3, ease: "easeOut" } }}
                   className="flex flex-col items-center"
                 >
-                  <span className="text-2xl font-serif font-black tracking-[0.25em] text-luxury-blue-mid uppercase leading-none transition-colors duration-300 group-hover:text-luxury-gold">
+                  <span className="text-3xl font-serif font-black tracking-[0.25em] text-luxury-blue-mid uppercase leading-none transition-colors duration-300 group-hover:text-luxury-gold">
                     HUECRAFT
                   </span>
                 </motion.div>

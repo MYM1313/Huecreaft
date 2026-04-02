@@ -67,21 +67,26 @@ export const FinalCTA: React.FC<{ className?: string }> = ({ className }) => {
 
                 {/* CTA Actions - Modern, Cinematic, Professional */}
                 <div className="pt-4 md:pt-6 lg:pt-10 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 lg:gap-8">
-                  <Link
-                    to="/request-proposal"
-                    className="group relative inline-flex items-center justify-center px-8 md:px-10 lg:px-14 py-3.5 md:py-4 lg:py-5 rounded-full btn-premium-navy overflow-hidden perspective-1000"
+                  <motion.div
+                    whileHover={{ 
+                      y: -10,
+                      rotateX: 15,
+                      scale: 1.05,
+                      transition: { duration: 0.4, ease: "easeOut" }
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                    className="perspective-1000"
                   >
-                    <span className="relative z-10 flex items-center gap-3 text-[10px] md:text-[11px] lg:text-xs font-bold uppercase tracking-[0.2em]">
-                      Transform My Space
-                      <ArrowRight className="h-3.5 md:h-4 lg:h-5 w-3.5 md:w-4 lg:w-5 transition-transform duration-500 group-hover:translate-x-1.5" />
-                    </span>
-                    {/* Shimmer Effect */}
-                    <motion.div 
-                      animate={{ x: ["-100%", "200%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear", repeatDelay: 1 }}
-                      className="absolute top-0 bottom-0 w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12"
-                    />
-                  </Link>
+                    <Link
+                      to="/request-proposal"
+                      className="group relative inline-flex items-center justify-center px-8 md:px-10 lg:px-14 py-3.5 md:py-4 lg:py-5 rounded-full btn-premium-lighting overflow-hidden"
+                    >
+                      <span className="relative z-10 flex items-center gap-3 text-[10px] md:text-[11px] lg:text-xs font-bold uppercase tracking-[0.2em]">
+                        Transform My Space
+                        <ArrowRight className="h-3.5 md:h-4 lg:h-5 w-3.5 md:w-4 lg:w-5 transition-transform duration-500 group-hover:translate-x-1.5" />
+                      </span>
+                    </Link>
+                  </motion.div>
                   
                   <Link
                     to="/services"

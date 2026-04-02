@@ -230,31 +230,53 @@ const Home = () => {
               }}
               className="flex flex-col items-center gap-5 lg:gap-8 w-full will-change-[opacity,transform]"
             >
-              <Link
-                to="/request-proposal"
-                className="group relative flex items-center justify-center gap-4 rounded-full btn-premium-navy px-10 md:px-14 lg:px-16 py-4 md:py-5 lg:py-6 text-[10px] md:text-[11px] lg:text-xs font-bold uppercase tracking-[0.3em] overflow-hidden"
+              <motion.div
+                whileHover={{ 
+                  y: -10,
+                  rotateX: 15,
+                  scale: 1.05,
+                  transition: { duration: 0.4, ease: "easeOut" }
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="perspective-1000 w-full flex justify-center"
               >
-                {/* Sophisticated Glow */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-luxury-gold/30 via-transparent to-luxury-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-                
-                {/* Refined Shine Effect */}
-                <motion.div 
-                  animate={{ x: ['-150%', '250%'] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "linear", repeatDelay: 2 }}
-                  className="absolute top-0 bottom-0 w-1/3 bg-gradient-to-r from-transparent via-white/15 to-transparent -skew-x-20"
-                />
-                
-                <span className="relative z-10">Transform My Space</span>
-                <ArrowRight className="relative z-10 w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-700 group-hover:translate-x-2" />
-              </Link>
+                <Link
+                  to="/request-proposal"
+                  className="group relative flex items-center justify-center gap-4 rounded-full btn-premium-navy px-10 md:px-14 lg:px-16 py-4 md:py-5 lg:py-6 text-[10px] md:text-[11px] lg:text-xs font-bold uppercase tracking-[0.3em] overflow-hidden w-full max-w-md"
+                >
+                  {/* Sophisticated Glow */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-luxury-gold/30 via-transparent to-luxury-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                  
+                  {/* Refined Shine Effect */}
+                  <motion.div 
+                    animate={{ x: ['-150%', '250%'] }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "linear", repeatDelay: 2 }}
+                    className="absolute top-0 bottom-0 w-1/3 bg-gradient-to-r from-transparent via-white/15 to-transparent -skew-x-20"
+                  />
+                  
+                  <span className="relative z-10">Transform My Space</span>
+                  <ArrowRight className="relative z-10 w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-700 group-hover:translate-x-2" />
+                </Link>
+              </motion.div>
 
               <div className="flex flex-col sm:flex-row items-center gap-4 lg:gap-6">
-                <Link
-                  to="/services"
-                  className="group relative flex items-center justify-center px-8 md:px-10 lg:px-12 py-3 md:py-3.5 lg:py-4 rounded-full border border-luxury-divider/30 text-[9px] md:text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.4em] text-luxury-gray/60 hover:text-luxury-gold hover:border-luxury-gold/40 hover:bg-luxury-gold/5 transition-all duration-700 active:scale-95"
+                <motion.div
+                  whileHover={{ 
+                    y: -10,
+                    rotateX: 15,
+                    scale: 1.05,
+                    transition: { duration: 0.4, ease: "easeOut" }
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                  className="perspective-1000 w-full sm:w-auto flex justify-center"
                 >
-                  <span className="relative z-10">View Services</span>
-                </Link>
+                  <Link
+                    to="/services"
+                    className="group relative flex items-center justify-center gap-4 rounded-full btn-premium-white-gold px-10 md:px-14 lg:px-16 py-4 md:py-5 lg:py-6 text-[10px] md:text-[11px] lg:text-xs font-bold uppercase tracking-[0.3em] overflow-hidden w-full max-w-md sm:max-w-none"
+                  >
+                    <span className="relative z-10">View Services</span>
+                  </Link>
+                </motion.div>
 
                 {/* Quick Contact Inline Buttons - Positioned Higher */}
                 <div className="flex items-center gap-3 lg:gap-4">

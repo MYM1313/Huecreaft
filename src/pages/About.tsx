@@ -52,6 +52,10 @@ const FadeInWhenVisible: React.FC<{ children: React.ReactNode; delay?: number; d
 };
 
 const About = () => {
+  React.useEffect(() => {
+    document.title = 'About | Huecraft';
+  }, []);
+
   const expertise = [
     {
       title: 'Painting',
@@ -472,10 +476,10 @@ const About = () => {
       </section>
 
       {/* [6] SAFETY – TRUST STRIP */}
-      <section className="py-12 bg-white overflow-hidden relative border-y border-luxury-divider -mt-[62px] gpu-accelerate">
+      <section className="py-12 bg-white overflow-hidden relative border-y border-luxury-divider gpu-accelerate">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           <FadeInWhenVisible>
-            <div className="relative panel-premium-navy rounded-[2.5rem] p-6 md:p-10 overflow-hidden border border-white/10 shadow-premium-lg will-change-transform group">
+            <div className="relative panel-premium-navy rounded-[3rem] p-6 md:p-10 overflow-hidden border border-white/10 shadow-premium-lg will-change-transform group">
               {/* Continuous Lighting Effect */}
               <motion.div 
                 animate={{ x: ["-100%", "200%"] }}
@@ -506,10 +510,10 @@ const About = () => {
       </section>
 
       {/* [7] SERVICE AREA – MINIMAL */}
-      <section className="py-12 md:py-16 bg-white relative overflow-hidden -mt-[56px] gpu-accelerate">
+      <section className="py-12 md:py-16 bg-white relative overflow-hidden gpu-accelerate">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 relative z-10">
           <FadeInWhenVisible>
-            <div className="relative panel-premium-navy rounded-3xl p-6 md:p-8 overflow-hidden group border border-white/10 shadow-premium-lg will-change-transform">
+            <div className="relative panel-premium-navy rounded-[3.5rem] p-6 md:p-8 overflow-hidden group border border-white/10 shadow-premium-lg will-change-transform animate-float-panel">
               {/* Continuous Lighting Effect */}
               <motion.div 
                 animate={{ x: ["-100%", "200%"] }}
@@ -563,7 +567,7 @@ const About = () => {
       </section>
 
       {/* [8] FINAL CTA – HERO STYLE PANEL */}
-      <FinalCTA className="-mt-[43px]" />
+      <FinalCTA />
     </div>
   );
 };

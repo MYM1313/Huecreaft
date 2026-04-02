@@ -119,7 +119,7 @@ const PremiumInput = ({
         className={cn(
           "relative rounded-[18px] md:rounded-[22px] border transition-all duration-500 luxury-easing bg-luxury-surface-warm/40 flex items-center overflow-hidden",
           isFocused 
-            ? "border-luxury-gold ring-4 ring-luxury-gold/10 -translate-y-[1px] shadow-premium-md bg-white" 
+            ? "border-luxury-gold ring-4 ring-luxury-gold/10 -translate-y-[1px] bg-white" 
             : "border-luxury-divider/60",
           error ? "border-red-400/60" : ""
         )}
@@ -198,8 +198,8 @@ const SelectionCard: React.FC<{
       "cursor-pointer rounded-[24px] transition-all duration-100 ease-out relative overflow-hidden group h-full flex flex-col justify-center",
       compact ? "p-4 min-h-[70px]" : "p-5 md:p-6 min-h-[90px]",
       isSelected 
-        ? "border-luxury-gold bg-white shadow-premium-md" 
-        : "border border-luxury-divider/50 bg-luxury-surface-warm/20 hover:border-luxury-gold/30 hover:bg-white hover:shadow-premium-sm"
+        ? "border-luxury-gold bg-white" 
+        : "border border-luxury-divider/50 bg-luxury-surface-warm/20 hover:border-luxury-gold/30 hover:bg-white"
     )}
   >
     {isSelected && (
@@ -207,9 +207,9 @@ const SelectionCard: React.FC<{
     )}
     <div className="relative z-10 flex flex-row items-center gap-4 h-full justify-start w-full text-left">
       <div className={cn(
-        "flex shrink-0 items-center justify-center rounded-xl md:rounded-2xl transition-all duration-100 ease-out shadow-sm",
+        "flex shrink-0 items-center justify-center rounded-xl md:rounded-2xl transition-all duration-100 ease-out",
         compact ? "h-10 w-10 md:h-12 md:w-12" : "h-12 w-12 md:h-14 md:w-14",
-        isSelected ? "bg-luxury-gold text-white shadow-md scale-105" : "bg-white text-luxury-gold group-hover:bg-luxury-gold group-hover:text-white border border-luxury-divider/50"
+        isSelected ? "bg-luxury-gold text-white scale-105" : "bg-white text-luxury-gold group-hover:bg-luxury-gold group-hover:text-white border border-luxury-divider/50"
       )}>
         {Icon ? <Icon className={cn(compact ? "h-5 w-5 md:h-6 md:w-6" : "h-6 w-6 md:h-7 md:w-7")} /> : <div className="h-2 w-2 rounded-full bg-current" />}
       </div>
@@ -228,7 +228,7 @@ const SelectionCard: React.FC<{
       {!compact && (
         <div className={cn(
           "h-6 w-6 rounded-full border flex items-center justify-center transition-all duration-100 ease-out shrink-0",
-          isSelected ? "border-luxury-gold bg-luxury-gold shadow-sm" : "border-luxury-divider group-hover:border-luxury-gold"
+          isSelected ? "border-luxury-gold bg-luxury-gold" : "border-luxury-divider group-hover:border-luxury-gold"
         )}>
           {isSelected && <div className="h-2.5 w-2.5 rounded-full bg-white" />}
         </div>
@@ -414,14 +414,14 @@ Notes: ${data.notes || 'None'}
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link 
                     to="/contact"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl border border-luxury-divider/50 px-8 py-3.5 text-[9px] font-bold uppercase tracking-widest text-luxury-ink transition-all hover:bg-luxury-ink hover:text-white shadow-premium-sm"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl border border-luxury-divider/50 px-8 py-3.5 text-[9px] font-bold uppercase tracking-widest text-luxury-ink transition-all hover:bg-luxury-ink hover:text-white"
                   >
                     <Mail className="h-3.5 w-3.5" />
                     Contact Us
                   </Link>
                   <a 
                     href="tel:+15558882424"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl bg-luxury-gold px-8 py-3.5 text-[9px] font-bold uppercase tracking-widest text-white shadow-premium-md transition-all hover:scale-105 active:scale-95"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl bg-luxury-gold px-8 py-3.5 text-[9px] font-bold uppercase tracking-widest text-white transition-all hover:scale-105 active:scale-95"
                   >
                     <Phone className="h-3.5 w-3.5" />
                     Call Now
@@ -757,7 +757,7 @@ Notes: ${data.notes || 'None'}
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="group flex items-center justify-center gap-2 px-4 py-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-luxury-gray hover:text-luxury-ink transition-all duration-500 luxury-easing bg-white/50 rounded-full border border-luxury-divider/20 hover:bg-white hover:shadow-sm"
+                  className="group flex items-center justify-center gap-2 px-4 py-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-luxury-gray hover:text-luxury-ink transition-all duration-500 luxury-easing bg-white/50 rounded-full border border-luxury-divider/20 hover:bg-white"
                 >
                   <ArrowLeft className="h-4 w-4 md:h-4 md:w-4 transition-transform duration-500 luxury-easing group-hover:-translate-x-1.5" />
                   Back

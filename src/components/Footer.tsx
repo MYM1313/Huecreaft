@@ -103,7 +103,7 @@ const Footer = () => {
                 whileHover={{ x: 5 }}
                 className="flex items-center gap-4 lg:gap-5 group"
               >
-                <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-luxury-blue-ultra border border-luxury-divider flex items-center justify-center group-hover:border-luxury-gold/50 group-hover:bg-white transition-all duration-500 shadow-premium-sm inner-highlight shrink-0">
+                <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-luxury-blue-ultra border border-luxury-divider flex items-center justify-center group-hover:border-luxury-gold/50 group-hover:bg-white transition-all duration-500 inner-highlight shrink-0">
                   <Mail className="w-4 h-4 lg:w-5 lg:h-5 text-luxury-blue-mid group-hover:text-luxury-gold transition-colors" />
                 </div>
                 <div className="flex flex-col">
@@ -117,7 +117,7 @@ const Footer = () => {
                 whileHover={{ x: 5 }}
                 className="flex items-center gap-4 lg:gap-5 group"
               >
-                <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-luxury-blue-ultra border border-luxury-divider flex items-center justify-center group-hover:border-luxury-gold/50 group-hover:bg-white transition-all duration-500 shadow-premium-sm inner-highlight shrink-0">
+                <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-luxury-blue-ultra border border-luxury-divider flex items-center justify-center group-hover:border-luxury-gold/50 group-hover:bg-white transition-all duration-500 inner-highlight shrink-0">
                   <Phone className="w-4 h-4 lg:w-5 lg:h-5 text-luxury-blue-mid group-hover:text-luxury-gold transition-colors" />
                 </div>
                 <div className="flex flex-col">

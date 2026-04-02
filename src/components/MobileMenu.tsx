@@ -53,7 +53,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               duration: 0.4,
               ease: [0.22, 1, 0.36, 1]
             }}
-            className="fixed right-0 top-0 z-[70] h-full w-[88%] sm:w-[82%] max-w-[480px] bg-white shadow-premium-xl rounded-l-[3rem] overflow-hidden flex flex-col border-l border-luxury-divider gpu-accelerate"
+            className="fixed right-0 top-0 z-[70] h-full w-[88%] sm:w-[82%] max-w-[480px] bg-white rounded-l-[3rem] overflow-hidden flex flex-col border-l border-luxury-divider gpu-accelerate"
           >
             {/* Header / Branding - Premium Layout */}
             <div className="px-8 pt-8 pb-4 flex items-center justify-between border-b border-luxury-divider">
@@ -73,7 +73,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                 whileHover={{ scale: 1.05, x: 2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={onClose}
-                className="group relative flex h-8 w-8 items-center justify-center rounded-full bg-luxury-blue-ultra/30 border border-luxury-divider text-luxury-blue-mid shadow-sm transition-all duration-300 hover:border-luxury-gold/40 hover:bg-white hover:shadow-premium-sm hover:text-luxury-gold"
+                className="group relative flex h-8 w-8 items-center justify-center rounded-full bg-luxury-blue-ultra/30 border border-luxury-divider text-luxury-blue-mid transition-all duration-300 hover:border-luxury-gold/40 hover:bg-white hover:text-luxury-gold"
                 aria-label="Go Back"
               >
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -100,14 +100,14 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                       to={item.path}
                       onClick={onClose}
                       className={cn(
-                        "group relative flex items-center gap-4 p-4 rounded-[2rem] bg-white border border-luxury-divider shadow-premium-sm transition-all duration-300",
-                        "hover:bg-luxury-blue-ultra hover:border-luxury-gold/20 hover:shadow-premium-md",
-                        isActive && "border-luxury-gold/30 bg-luxury-blue-ultra shadow-inner"
+                        "group relative flex items-center gap-4 p-4 rounded-[2rem] bg-white border border-luxury-divider transition-all duration-300",
+                        "hover:bg-luxury-blue-ultra hover:border-luxury-gold/20",
+                        isActive && "border-luxury-gold/30 bg-luxury-blue-ultra"
                       )}
                     >
                       <div className={cn(
-                        "flex h-9 w-9 items-center justify-center rounded-xl transition-all duration-300 shadow-premium-sm",
-                        isActive ? "bg-luxury-blue-mid text-white shadow-premium-md" : "bg-luxury-blue-ultra text-luxury-blue-mid group-hover:bg-luxury-blue-mid group-hover:text-white"
+                        "flex h-9 w-9 items-center justify-center rounded-xl transition-all duration-300",
+                        isActive ? "bg-luxury-blue-mid text-white" : "bg-luxury-blue-ultra text-luxury-blue-mid group-hover:bg-luxury-blue-mid group-hover:text-white"
                       )}>
                         <Icon className="h-4.5 w-4.5" />
                       </div>

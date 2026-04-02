@@ -90,7 +90,7 @@ export const FinalCTA: React.FC<{ className?: string }> = ({ className }) => {
                   
                   <Link
                     to="/services"
-                    className="group inline-flex items-center justify-center px-8 md:px-10 lg:px-14 py-3.5 md:py-4 lg:py-5 rounded-full border border-luxury-divider bg-white text-[10px] md:text-[11px] lg:text-xs font-bold uppercase tracking-[0.2em] text-luxury-ink transition-all duration-500 hover:border-luxury-gold hover:text-luxury-gold hover:-translate-y-1.5 shadow-premium-md hover:shadow-premium-lg"
+                    className="group inline-flex items-center justify-center px-8 md:px-10 lg:px-14 py-3.5 md:py-4 lg:py-5 rounded-full border border-luxury-divider bg-white text-[10px] md:text-[11px] lg:text-xs font-bold uppercase tracking-[0.2em] text-luxury-ink transition-all duration-500 hover:border-luxury-gold hover:text-luxury-gold hover:-translate-y-1.5"
                   >
                     View Our Services
                   </Link>

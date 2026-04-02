@@ -272,15 +272,13 @@ const ServiceCarousel = ({ images, title }: { images: string[], title: string })
                     
                     <div className="mt-auto pt-4 border-t border-luxury-divider/50">
                       <motion.div
-                        whileHover={{ y: -1.5 }}
-                        whileTap={{ scale: 0.97 }}
+                        whileTap={{ scale: 0.98 }}
                         className="inline-block w-full"
                       >
                         <Link
                           to={`/services/${service.id}`}
-                          className="relative group/btn flex items-center justify-center gap-4 overflow-hidden rounded-full btn-premium-navy px-10 py-5 text-[11px] font-bold uppercase tracking-[0.4em] w-full"
+                          className="relative group/btn flex items-center justify-center gap-4 overflow-hidden rounded-full btn-premium-lighting px-10 py-5 text-[11px] font-bold uppercase tracking-[0.4em] w-full"
                         >
-                          <div className="absolute inset-0 bg-white/10 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500" />
                           <span className="relative z-10">Explore Details</span>
                           <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover/btn:translate-x-2" />
                         </Link>

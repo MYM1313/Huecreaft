@@ -284,7 +284,7 @@ const Home = () => {
                     href="tel:+15558882424"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group relative flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-3 rounded-full bg-white border border-luxury-divider/40 text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-luxury-ink shadow-premium-sm hover:border-luxury-gold/30 hover:shadow-premium-md transition-all duration-300 overflow-hidden"
+                    className="group relative flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-3 rounded-full bg-white border border-luxury-divider/40 text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-luxury-ink hover:border-luxury-gold/30 transition-all duration-300 overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-luxury-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="flex h-5 w-5 lg:h-6 lg:w-6 items-center justify-center rounded-full bg-luxury-blue-ultra text-luxury-gold shadow-inner">
@@ -302,7 +302,7 @@ const Home = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group relative flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-3 rounded-full bg-white border border-luxury-divider/40 text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-luxury-ink shadow-premium-sm hover:border-[#25D366]/30 hover:shadow-premium-md transition-all duration-300 overflow-hidden"
+                    className="group relative flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-3 rounded-full bg-white border border-luxury-divider/40 text-[9px] lg:text-[10px] font-bold uppercase tracking-widest text-luxury-ink hover:border-[#25D366]/30 transition-all duration-300 overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-[#25D366]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="flex h-5 w-5 lg:h-6 lg:w-6 items-center justify-center rounded-full bg-[#25D366]/10 text-[#25D366] shadow-inner">
@@ -392,7 +392,7 @@ const Home = () => {
                   <div className="pt-10">
                     <Link
                       to="/services"
-                      className="group relative inline-flex items-center justify-center px-12 py-5 rounded-full bg-luxury-ink text-white text-xs font-bold uppercase tracking-[0.4em] shadow-premium-lg hover:shadow-luxury-gold/20 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 active:translate-y-0 overflow-hidden"
+                      className="group relative inline-flex items-center justify-center px-12 py-5 rounded-full bg-luxury-ink text-white text-xs font-bold uppercase tracking-[0.4em] transition-all duration-700 hover:-translate-y-2 active:translate-y-0 overflow-hidden"
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold/20 via-transparent to-luxury-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                       <span className="relative z-10">View All Services</span>
@@ -572,7 +572,7 @@ const Home = () => {
                   <div className="pt-10">
                     <Link
                       to="/projects"
-                      className="group relative inline-flex items-center justify-center px-12 py-5 rounded-full bg-luxury-ink text-white text-xs font-bold uppercase tracking-[0.3em] shadow-premium-lg hover:shadow-premium-xl transition-all duration-500 hover:-translate-y-1.5 active:translate-y-0 overflow-hidden edge-highlight"
+                      className="group relative inline-flex items-center justify-center px-12 py-5 rounded-full bg-luxury-ink text-white text-xs font-bold uppercase tracking-[0.3em] transition-all duration-500 hover:-translate-y-1.5 active:translate-y-0 overflow-hidden edge-highlight"
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-luxury-blue-mid/30 via-transparent to-luxury-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <span className="relative z-10">View All Projects</span>
@@ -629,7 +629,7 @@ const Home = () => {
                   <div className="pt-4">
                     <Link
                       to="/projects"
-                      className="group relative inline-flex items-center justify-center px-10 py-4 rounded-full bg-luxury-ink text-white text-[10px] font-bold uppercase tracking-[0.3em] shadow-premium-lg hover:shadow-premium-xl transition-all duration-500 overflow-hidden edge-highlight"
+                      className="group relative inline-flex items-center justify-center px-10 py-4 rounded-full bg-luxury-ink text-white text-[10px] font-bold uppercase tracking-[0.3em] transition-all duration-500 overflow-hidden edge-highlight"
                     >
                       <span className="relative z-10">View All Projects</span>
                       <ArrowRight className="relative z-10 w-3.5 h-3.5 ml-3" />
@@ -859,7 +859,7 @@ const Home = () => {
           <div className="relative -mx-4 px-4 lg:mx-0 lg:px-0">
             <div 
               className="flex gap-6 lg:gap-8 overflow-x-auto pb-16 lg:pb-24 no-scrollbar snap-x snap-mandatory cursor-grab active:cursor-grabbing"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
             >
               {/* Duplicating array for a pseudo-infinite loop feel */}
               {[...testimonials, ...testimonials].map((testimonial, i) => (
@@ -870,15 +870,10 @@ const Home = () => {
                   <motion.div
                     whileHover={{ 
                       y: -12,
-                      scale: 1.02,
-                      boxShadow: "0 30px 60px -12px rgba(26,46,71,0.15)"
+                      scale: 1.02
                     }}
                     whileTap={{ scale: 0.98 }}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative p-6 md:p-8 lg:p-10 rounded-[2.5rem] lg:rounded-[3rem] bg-white shadow-premium-lg border border-luxury-divider flex flex-col group transition-all duration-500 overflow-hidden h-full min-h-[300px] lg:min-h-[350px] perspective-1000 will-change-[transform,opacity,box-shadow]"
+                    className="relative p-6 md:p-8 lg:p-10 rounded-[2.5rem] lg:rounded-[3rem] bg-white border border-luxury-divider flex flex-col group overflow-hidden h-full min-h-[300px] lg:min-h-[350px] perspective-1000 will-change-transform"
                   >
                     {/* Premium Shade Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-br from-luxury-blue-ultra/30 via-transparent to-luxury-gold/5 opacity-50" />
@@ -890,11 +885,7 @@ const Home = () => {
                     
                     <div className="relative z-10 flex flex-col h-full">
                       {/* Rating Header - Compact & Professional */}
-                      <motion.div 
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
+                      <div 
                         className="flex flex-col items-start mb-5"
                       >
                         <div className="flex gap-0.5 mb-1.5">
@@ -916,25 +907,17 @@ const Home = () => {
                           })}
                         </div>
                         <span className="text-[12px] font-black text-luxury-gold tracking-tight">{testimonial.rating} Rating</span>
-                      </motion.div>
+                      </div>
 
                       {/* Message - Increased Size & Clarity */}
-                      <motion.p 
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
+                      <p 
                         className="font-serif text-base md:text-lg lg:text-xl italic text-luxury-ink leading-relaxed lg:leading-loose mb-8 text-left line-clamp-6"
                       >
                         "{testimonial.message}"
-                      </motion.p>
+                      </p>
 
                       {/* User Info - Ultra Compact with smaller avatar */}
-                      <motion.div 
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
+                      <div 
                         className="mt-auto flex items-center gap-3 lg:gap-4 text-left"
                       >
                         <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full overflow-hidden border border-luxury-divider shadow-premium-sm group-hover:border-luxury-gold transition-all duration-500 flex-shrink-0 group-hover:scale-110">
@@ -948,7 +931,7 @@ const Home = () => {
                         <div className="space-y-0.5">
                           <h4 className="text-[11px] lg:text-xs font-bold uppercase tracking-[0.15em] text-luxury-ink leading-none">{testimonial.name}</h4>
                         </div>
-                      </motion.div>
+                      </div>
                     </div>
 
                     {/* Corner Accent - 3D Glow */}

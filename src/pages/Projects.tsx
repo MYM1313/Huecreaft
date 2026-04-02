@@ -151,13 +151,13 @@ const LuxuryFilter = ({ current, onSelect }: { current: string; onSelect: (cat: 
           className={`relative px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.1em] transition-all duration-300 tap-interaction ${
             current === cat 
               ? 'text-white' 
-              : 'text-luxury-gray hover:text-luxury-blue-mid bg-white border border-luxury-divider shadow-premium-sm hover:shadow-premium-md'
+              : 'text-luxury-gray hover:text-luxury-blue-mid bg-white border border-luxury-divider hover:border-luxury-gold/30'
           }`}
         >
           {current === cat && (
             <motion.div
               layoutId="activeFilter"
-              className="absolute inset-0 bg-luxury-gold rounded-full shadow-premium-md"
+              className="absolute inset-0 bg-luxury-gold rounded-full"
               transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
             />
           )}
@@ -390,7 +390,7 @@ const Projects = () => {
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
             onClick={handleLoadMore}
-            className="group relative flex items-center justify-center gap-3 rounded-full bg-gradient-to-b from-luxury-blue-mid to-luxury-ink px-6 py-3.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white shadow-premium-md transition-all hover:shadow-premium-lg active:scale-95 inner-highlight overflow-hidden"
+            className="group relative flex items-center justify-center gap-3 rounded-full bg-gradient-to-b from-luxury-blue-mid to-luxury-ink px-6 py-3.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition-all active:scale-95 inner-highlight overflow-hidden"
           >
             {/* Continuous Spark/Shimmer Effect */}
             <motion.div 

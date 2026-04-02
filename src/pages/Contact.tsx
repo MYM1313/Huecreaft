@@ -93,12 +93,12 @@ const PremiumInput = ({
         }}
         className={cn(
           "relative rounded-2xl border transition-all duration-500 luxury-easing bg-white/30 will-change-transform",
-          isFocused ? "border-luxury-gold ring-4 ring-luxury-gold/5 bg-white shadow-premium-md" : "border-luxury-divider/50",
+          isFocused ? "border-luxury-gold ring-4 ring-luxury-gold/5 bg-white" : "border-luxury-divider/50",
           error ? "border-red-400/50 ring-red-400/5" : ""
         )}
       >
         {isFocused && (
-          <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-luxury-gold shadow-[0_0_10px_rgba(197,148,63,0.3)]" />
+          <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-luxury-gold" />
         )}
         {isSelect ? (
           <div className="relative">
@@ -216,12 +216,12 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
           >
-            <span className="text-[8px] font-bold uppercase tracking-[0.4em] text-luxury-gold bg-white/80 px-5 py-2 rounded-full border border-luxury-divider/40 shadow-premium-sm edge-highlight mb-5 inline-block">
+            <span className="text-[8px] font-bold uppercase tracking-[0.4em] text-luxury-gold bg-white/80 px-5 py-2 rounded-full border border-luxury-divider/40 edge-highlight mb-5 inline-block">
               Connect With Us
             </span>
             <h1 className="font-serif text-3xl md:text-5xl font-bold tracking-tighter text-luxury-ink leading-[1] mb-5">
               Let's Start Your <br className="hidden sm:block" />
-              <span className="text-luxury-gold italic font-light drop-shadow-sm">Transformation.</span>
+              <span className="text-luxury-gold italic font-light">Transformation.</span>
             </h1>
             <p className="mt-4 font-sans text-sm md:text-base font-light leading-relaxed text-luxury-gray/80 max-w-xl mx-auto">
               Whether you have a specific project in mind or need expert guidance, 
@@ -241,7 +241,7 @@ const Contact = () => {
               ref={formCardRef}
               className="relative"
             >
-              <div className="relative z-10 overflow-hidden rounded-[2rem] md:rounded-[3rem] border border-luxury-divider/50 bg-white p-8 md:p-16 shadow-premium-xl transition-all duration-700 luxury-easing edge-highlight">
+              <div className="relative z-10 overflow-hidden rounded-[2rem] md:rounded-[3rem] border border-luxury-divider/50 bg-white p-8 md:p-16 transition-all duration-700 luxury-easing edge-highlight">
                 
                 <AnimatePresence mode="wait">
                   {isSuccess ? (
@@ -351,7 +351,7 @@ const Contact = () => {
               ref={infoPanelRef}
               className="relative group/panel"
             >
-              <div className="relative z-10 overflow-hidden rounded-[1.5rem] border border-luxury-divider/20 bg-white p-6 md:p-8 shadow-premium-lg transition-all duration-700 luxury-easing edge-highlight will-change-[transform,box-shadow] h-full">
+              <div className="relative z-10 overflow-hidden rounded-[1.5rem] border border-luxury-divider/20 bg-white p-6 md:p-8 transition-all duration-700 luxury-easing edge-highlight will-change-[transform,box-shadow] h-full">
                 <div className="relative z-10 space-y-6 md:space-y-8 flex flex-col h-full">
                   <div className="flex-grow">
                     <span className="text-[8px] font-bold uppercase tracking-[0.2em] text-luxury-gold mb-6 block">
@@ -359,7 +359,7 @@ const Contact = () => {
                     </span>
                     <div className="space-y-5 md:space-y-6">
                       <div className="flex items-center gap-5 group">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/30 shadow-premium-sm border border-luxury-divider/40 transition-all duration-700 luxury-easing group-hover:bg-luxury-gold group-hover:text-white group-hover:shadow-premium-md group-hover:-translate-y-0.5">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/30 border border-luxury-divider/40 transition-all duration-700 luxury-easing group-hover:bg-luxury-gold group-hover:text-white group-hover:-translate-y-0.5">
                           <Phone className="h-4 w-4 text-luxury-gold group-hover:text-white transition-colors duration-700" />
                         </div>
                         <div>
@@ -374,7 +374,7 @@ const Contact = () => {
                         rel="noopener noreferrer" 
                         className="flex items-center gap-5 group"
                       >
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/30 shadow-premium-sm border border-luxury-divider/40 transition-all duration-700 luxury-easing group-hover:bg-[#25D366] group-hover:text-white group-hover:shadow-premium-md group-hover:-translate-y-0.5">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/30 border border-luxury-divider/40 transition-all duration-700 luxury-easing group-hover:bg-[#25D366] group-hover:text-white group-hover:-translate-y-0.5">
                           <MessageCircle className="h-4 w-4 text-[#25D366] group-hover:text-white transition-colors duration-700" />
                         </div>
                         <div>
@@ -384,7 +384,7 @@ const Contact = () => {
                       </a>
  
                       <div className="flex items-center gap-5 group">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/30 shadow-premium-sm border border-luxury-divider/40 transition-all duration-700 luxury-easing group-hover:bg-luxury-gold group-hover:text-white group-hover:shadow-premium-md group-hover:-translate-y-0.5">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/30 border border-luxury-divider/40 transition-all duration-700 luxury-easing group-hover:bg-luxury-gold group-hover:text-white group-hover:-translate-y-0.5">
                           <Mail className="h-4 w-4 text-luxury-gold group-hover:text-white transition-colors duration-700" />
                         </div>
                         <div>
@@ -394,7 +394,7 @@ const Contact = () => {
                       </div>
  
                       <div className="flex items-center gap-5 group">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/30 shadow-premium-sm border border-luxury-divider/40 transition-all duration-700 luxury-easing group-hover:bg-luxury-gold group-hover:text-white group-hover:shadow-premium-md group-hover:-translate-y-0.5">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/30 border border-luxury-divider/40 transition-all duration-700 luxury-easing group-hover:bg-luxury-gold group-hover:text-white group-hover:-translate-y-0.5">
                           <MapPin className="h-4 w-4 text-luxury-gold group-hover:text-white transition-colors duration-700" />
                         </div>
                         <div>

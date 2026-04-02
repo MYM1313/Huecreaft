@@ -125,62 +125,51 @@
   @apply bg-gradient-to-r from-luxury-ink via-luxury-blue-mid to-luxury-ink text-white transition-all duration-500 hover:-translate-y-2 active:translate-y-0 border border-luxury-blue-soft/30;
   animation: gradient 6s ease infinite, float-btn 4s ease-in-out infinite;
   background-size: 200% 200%;
-  box-shadow: 
-    inset 0 1px 1px rgba(255,255,255,0.2),
-    0 4px 15px rgba(26,46,71,0.3),
-    0 8px 0 -2px rgba(26,46,71,0.1);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.2);
 }
 
 .btn-premium-navy:hover {
-  box-shadow: 
-    inset 0 1px 1px rgba(255,255,255,0.3),
-    0 15px 30px rgba(26,46,71,0.4),
-    0 10px 0 -2px rgba(26,46,71,0.15);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.3);
 }
 
 .btn-premium-solid {
   @apply bg-luxury-ink text-white transition-all duration-500 hover:-translate-y-2 active:translate-y-0 border border-luxury-blue-soft/30;
   animation: float-btn 4s ease-in-out infinite;
-  box-shadow: 
-    inset 0 1px 1px rgba(255,255,255,0.2),
-    0 4px 15px rgba(26,46,71,0.3),
-    0 8px 0 -2px rgba(26,46,71,0.1);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.2);
 }
 
 .btn-premium-solid:hover {
-  box-shadow: 
-    inset 0 1px 1px rgba(255,255,255,0.3),
-    0 15px 30px rgba(26,46,71,0.4),
-    0 10px 0 -2px rgba(26,46,71,0.15);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.3);
 }
 
 .btn-premium-lighting {
-  @apply bg-luxury-ink text-white transition-all duration-500 hover:-translate-y-2 active:translate-y-0 border border-luxury-blue-soft/30;
-  animation: float-btn 4s ease-in-out infinite, lighting-sweep 3s linear infinite;
+  @apply bg-luxury-ink text-white transition-all duration-500 border border-luxury-blue-soft/30;
+  animation: lighting-sweep 3s linear infinite;
   background-image: linear-gradient(110deg, transparent 40%, rgba(255,255,255,0.15) 50%, transparent 60%);
   background-size: 200% 100%;
-  box-shadow: none;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.15), inset 0 -4px 0 rgba(0,0,0,0.6);
+  transform: translateY(0);
 }
 
 .btn-premium-lighting:hover {
-  box-shadow: none;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.25), inset 0 -4px 0 rgba(0,0,0,0.6);
+  transform: translateY(-2px);
+}
+
+.btn-premium-lighting:active {
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.1), inset 0 -1px 0 rgba(0,0,0,0.6);
+  transform: translateY(3px);
 }
 
 .btn-premium-white-gold {
   @apply bg-white text-luxury-ink transition-all duration-500 hover:-translate-y-2 active:translate-y-0 border border-luxury-gold/30;
   animation: float-btn 4s ease-in-out infinite;
-  box-shadow: 
-    inset 0 1px 1px rgba(255,255,255,1),
-    0 4px 15px rgba(197,148,63,0.1),
-    0 8px 0 -2px rgba(197,148,63,0.05);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,1);
 }
 
 .btn-premium-white-gold:hover {
   @apply border-luxury-gold/50 text-luxury-gold;
-  box-shadow: 
-    inset 0 1px 1px rgba(255,255,255,1),
-    0 15px 30px rgba(197,148,63,0.15),
-    0 10px 0 -2px rgba(197,148,63,0.1);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,1);
 }
 
 @keyframes float-panel {

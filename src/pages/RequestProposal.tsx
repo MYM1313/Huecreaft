@@ -56,7 +56,7 @@ const RequestProposal = () => {
               
               <Link
                 to="/contact"
-                className="group inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-xl border border-luxury-divider px-10 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-ink transition-all duration-300 hover:border-luxury-gold hover:text-luxury-gold hover:-translate-y-1 bg-white shadow-sm active:scale-[0.97] tap-interaction"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-xl border border-luxury-divider px-10 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-ink transition-all duration-300 hover:border-luxury-gold hover:text-luxury-gold hover:-translate-y-1 bg-white active:scale-[0.97] tap-interaction"
               >
                 <Mail className="h-4 w-4" />
                 Contact Us
@@ -85,9 +85,9 @@ const RequestProposal = () => {
                 {/* CALL EXPERT BUTTON */}
                 <motion.a
                   href="tel:+15558882424"
-                  whileHover={{ scale: 1.02, y: -3, boxShadow: "0 20px 40px -12px rgba(197,148,63,0.15)" }}
+                  whileHover={{ scale: 1.02, y: -3 }}
                   whileTap={{ scale: 0.98 }}
-                  className="group relative flex items-center justify-between p-4 md:p-5 rounded-2xl bg-white border border-luxury-divider shadow-premium-sm hover:border-luxury-gold/40 transition-all duration-500 overflow-hidden tap-interaction"
+                  className="group relative flex items-center justify-between p-4 md:p-5 rounded-2xl bg-white border border-luxury-divider hover:border-luxury-gold/40 transition-all duration-500 overflow-hidden tap-interaction"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-luxury-gold/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
@@ -112,9 +112,9 @@ const RequestProposal = () => {
                   href="https://wa.me/15558882424"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.02, y: -3, boxShadow: "0 20px 40px -12px rgba(37,211,102,0.1)" }}
+                  whileHover={{ scale: 1.02, y: -3 }}
                   whileTap={{ scale: 0.98 }}
-                  className="group relative flex items-center justify-between p-4 md:p-5 rounded-2xl bg-white border border-luxury-divider shadow-premium-sm hover:border-[#25D366]/40 transition-all duration-500 overflow-hidden tap-interaction"
+                  className="group relative flex items-center justify-between p-4 md:p-5 rounded-2xl bg-white border border-luxury-divider hover:border-[#25D366]/40 transition-all duration-500 overflow-hidden tap-interaction"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-[#25D366]/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   

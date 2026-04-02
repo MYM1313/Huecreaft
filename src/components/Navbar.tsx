@@ -55,8 +55,8 @@ const Navbar = () => {
         className={cn(
           'fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 border-b rounded-b-xl gpu-accelerate',
           scrolled 
-            ? 'bg-white/98 backdrop-blur-xl py-1 shadow-premium-md border-luxury-divider/50' 
-            : 'bg-white/95 backdrop-blur-md py-2 shadow-premium-sm border-luxury-divider/20'
+            ? 'bg-white/98 py-1 shadow-premium-md border-luxury-divider/50' 
+            : 'bg-white/95 py-2 shadow-premium-sm border-luxury-divider/20'
         )}
       >
         <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-16">

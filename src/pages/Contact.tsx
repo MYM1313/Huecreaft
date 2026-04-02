@@ -92,7 +92,7 @@ const PremiumInput = ({
           y: isFocused ? -2 : 0,
         }}
         className={cn(
-          "relative rounded-2xl border transition-all duration-500 luxury-easing bg-white/30 backdrop-blur-sm will-change-transform",
+          "relative rounded-2xl border transition-all duration-500 luxury-easing bg-white/30 will-change-transform",
           isFocused ? "border-luxury-gold ring-4 ring-luxury-gold/5 bg-white shadow-premium-md" : "border-luxury-divider/50",
           error ? "border-red-400/50 ring-red-400/5" : ""
         )}
@@ -216,7 +216,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
           >
-            <span className="text-[8px] font-bold uppercase tracking-[0.4em] text-luxury-gold bg-white/80 backdrop-blur-md px-5 py-2 rounded-full border border-luxury-divider/40 shadow-premium-sm edge-highlight mb-5 inline-block">
+            <span className="text-[8px] font-bold uppercase tracking-[0.4em] text-luxury-gold bg-white/80 px-5 py-2 rounded-full border border-luxury-divider/40 shadow-premium-sm edge-highlight mb-5 inline-block">
               Connect With Us
             </span>
             <h1 className="font-serif text-3xl md:text-5xl font-bold tracking-tighter text-luxury-ink leading-[1] mb-5">
@@ -418,43 +418,34 @@ const Contact = () => {
             {/* SERVICE REGIONS PANEL */}
             <motion.div
               initial={{ opacity: 0, x: 5 }}
-              animate={{ 
-                opacity: 1, 
-                x: 0,
-                y: [0, -10, 0],
-                rotateX: [0, 2, 0],
-                rotateY: [0, -2, 0]
-              }}
-              transition={{ 
-                opacity: { duration: 0.6 },
-                x: { duration: 0.6 },
-                y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
-                rotateX: { duration: 8, repeat: Infinity, ease: "easeInOut" },
-                rotateY: { duration: 7, repeat: Infinity, ease: "easeInOut" }
-              }}
-              className="relative bg-white rounded-[3rem] p-8 md:p-10 border border-luxury-divider shadow-premium-xl hover:shadow-[0_50px_100px_-20px_rgba(26,46,71,0.15)] transition-all duration-700 overflow-hidden group will-change-[transform,box-shadow] h-full flex flex-col perspective-2000"
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="relative panel-premium-navy rounded-[3rem] p-8 md:p-10 overflow-hidden group will-change-transform h-full flex flex-col perspective-2000"
             >
-              {/* 3D Lighting/Shading */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-transparent to-white/40 pointer-events-none" />
-              
+              {/* Continuous Lighting Effect */}
+              <motion.div 
+                animate={{ x: ["-100%", "200%"] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "linear", repeatDelay: 2 }}
+                className="absolute top-0 bottom-0 w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 pointer-events-none z-0"
+              />
               {/* Subtle top reflection */}
-              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-luxury-gold/40 to-transparent opacity-90" />
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-90" />
               
               <div className="flex flex-col items-center sm:items-start gap-8 flex-grow relative z-10">
-                <div className="flex-shrink-0 w-16 h-16 rounded-[1.5rem] bg-gradient-to-br from-luxury-blue-ultra to-white text-luxury-blue-mid flex items-center justify-center border border-luxury-divider shadow-premium-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-700">
+                <div className="flex-shrink-0 w-16 h-16 rounded-[1.5rem] bg-white/10 text-white flex items-center justify-center border border-white/20 shadow-premium-sm group-hover:scale-110 group-hover:rotate-6 transition-transform duration-700">
                   <MapPin className="w-8 h-8 text-luxury-gold" strokeWidth={1.5} />
-                  <div className="absolute inset-0 bg-luxury-gold/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="absolute inset-0 bg-luxury-gold/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 </div>
                 
                 <div className="text-center sm:text-left w-full flex-grow flex flex-col">
-                  <h2 className="font-serif text-2xl md:text-3xl font-bold text-luxury-ink mb-3 tracking-tight group-hover:text-luxury-blue-mid transition-colors duration-500">
+                  <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight group-hover:text-luxury-gold transition-colors duration-500">
                     Service Regions
                   </h2>
-                  <p className="text-sm md:text-base text-luxury-gray font-light mb-10 leading-relaxed">
+                  <p className="text-sm md:text-base text-white/70 font-light mb-10 leading-relaxed">
                     Delivering master-level craftsmanship across the greater region.
                   </p>
                   
-                  <div className="grid grid-cols-2 gap-y-8 gap-x-6 text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] text-luxury-blue-mid mt-auto">
+                  <div className="grid grid-cols-2 gap-y-8 gap-x-6 text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] text-luxury-gold mt-auto">
                     {[
                       { name: "Calgary" },
                       { name: "Airdrie" },
@@ -462,10 +453,10 @@ const Contact = () => {
                       { name: "Greater Region" }
                     ].map((region) => (
                       <div key={region.name} className="flex items-center gap-4 group/item">
-                        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-luxury-blue-ultra border border-luxury-divider text-luxury-gold group-hover/item:bg-luxury-gold group-hover/item:text-white group-hover/item:border-luxury-gold transition-all duration-500 shadow-premium-sm">
+                        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/10 border border-white/20 text-luxury-gold group-hover/item:bg-luxury-gold group-hover/item:text-white group-hover/item:border-luxury-gold transition-all duration-500 shadow-premium-sm">
                           <MapPin className="h-3.5 w-3.5" strokeWidth={2.5} />
                         </div>
-                        <span className="truncate group-hover/item:translate-x-1 transition-transform duration-300">{region.name}</span>
+                        <span className="truncate text-white group-hover/item:translate-x-1 transition-transform duration-300">{region.name}</span>
                       </div>
                     ))}
                   </div>

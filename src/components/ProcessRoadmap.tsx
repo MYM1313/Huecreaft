@@ -93,7 +93,7 @@ const StepItem: React.FC<{ step: Step; index: number }> = ({ step, index }) => {
         initial={{ opacity: 0, y: 20, scale: 0.9 }}
         animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 20, scale: 0.9 }}
         transition={{ duration: 0.8, delay: 0.2 + (index * 0.1), ease: [0.22, 1, 0.36, 1] }}
-        className="w-full max-w-[220px] lg:max-w-full rounded-full bg-white backdrop-blur-md px-6 py-3 lg:py-4 shadow-premium-md border border-luxury-divider group inner-highlight-dark hover:shadow-premium-lg hover:-translate-y-1 transition-all duration-500"
+        className="w-full max-w-[220px] lg:max-w-full rounded-full bg-white px-6 py-3 lg:py-4 shadow-premium-md border border-luxury-divider group inner-highlight-dark hover:shadow-premium-lg hover:-translate-y-1 transition-all duration-500"
       >
         <div className="flex flex-col items-center justify-center gap-0.5 lg:gap-1">
           <div className="text-[8px] lg:text-[10px] font-black uppercase tracking-[0.3em] text-luxury-gold/80 group-hover:text-luxury-gold transition-colors">

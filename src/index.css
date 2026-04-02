@@ -183,6 +183,25 @@
     0 10px 0 -2px rgba(197,148,63,0.1);
 }
 
+@keyframes float-panel {
+  0%, 100% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
+  33% { transform: translate3d(0, -10px, 0) rotateX(1deg) rotateY(-1deg); }
+  66% { transform: translate3d(0, -5px, 0) rotateX(-1deg) rotateY(1deg); }
+}
+
+.panel-premium-navy {
+  @apply bg-gradient-to-br from-luxury-ink via-luxury-blue-mid to-luxury-ink text-white border border-luxury-blue-soft/30;
+  will-change: transform;
+  box-shadow: 
+    inset 0 1px 1px rgba(255,255,255,0.1),
+    0 25px 50px -12px rgba(26,46,71,0.3),
+    0 12px 24px -6px rgba(26,46,71,0.15);
+}
+
+.animate-float-panel {
+  animation: float-panel 8s ease-in-out infinite;
+}
+
 @keyframes lighting-sweep {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }

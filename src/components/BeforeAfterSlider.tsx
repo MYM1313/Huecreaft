@@ -42,9 +42,21 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({ beforeImage, afte
     return () => observer.disconnect();
   }, []);
 
-  // Auto-swipe animation when entering viewport removed as per user request
+  // Auto-swipe animation when entering viewport
   useEffect(() => {
-    // No auto-swipe
+    if (isInView && !hasInteracted) {
+      const timer = setTimeout(() => {
+        animate(sliderX, 100, { duration: 0 });
+        animate(sliderX, 0, { 
+          duration: 1.2, 
+          ease: [0.45, 0, 0.55, 1],
+          delay: 0.2
+        }).then(() => {
+          animate(sliderX, 50, { duration: 0.8, ease: "easeOut" });
+        });
+      }, 500);
+      return () => clearTimeout(timer);
+    }
   }, [isInView, hasInteracted]);
 
   const handlePointerDown = (e: React.PointerEvent) => {
@@ -170,7 +182,7 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({ beforeImage, afte
             exit={{ opacity: 0 }}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-12 z-40 pointer-events-none"
           >
-            <span className="bg-white/20 text-white text-[8px] md:text-[9px] font-medium uppercase tracking-[0.3em] px-4 py-2 rounded-full border border-white/10 backdrop-blur-sm">Swipe to compare</span>
+            <span className="bg-white/20 text-white text-[8px] md:text-[9px] font-medium uppercase tracking-[0.3em] px-4 py-2 rounded-full border border-white/10">Swipe to compare</span>
           </motion.div>
         )}
       </AnimatePresence>

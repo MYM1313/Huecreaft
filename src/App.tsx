@@ -63,31 +63,123 @@ const AppContent = () => {
       {/* Only show public navbar on non-admin pages */}
       {!isAdminPath && <Navbar />}
 
-      <main className="flex-grow">
-        <Routes location={location}>
-          {/* Public Routes */}
-          <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
-          <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
-          <Route path="/services/:id" element={<PageWrapper><ServiceDetail /></PageWrapper>} />
-          <Route path="/projects" element={<PageWrapper><Projects /></PageWrapper>} />
-          <Route path="/projects/:id" element={<PageWrapper><ProjectDetail /></PageWrapper>} />
-          <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
-          <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
-          <Route path="/request-proposal" element={<PageWrapper><RequestProposal /></PageWrapper>} />
-          <Route path="/proposal-form" element={<PageWrapper><ProposalForm /></PageWrapper>} />
+      <main className="flex-grow relative">
+        <AnimatePresence mode="wait">
+          <Routes location={location}>
+            {/* Public Routes */}
+            <Route path="/" element={
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Home />
+              </motion.div>
+            } />
+            <Route path="/services" element={
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Services />
+              </motion.div>
+            } />
+            <Route path="/services/:id" element={
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <ServiceDetail />
+              </motion.div>
+            } />
+            <Route path="/projects" element={
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Projects />
+              </motion.div>
+            } />
+            <Route path="/projects/:id" element={
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <ProjectDetail />
+              </motion.div>
+            } />
+            <Route path="/about" element={
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <About />
+              </motion.div>
+            } />
+            <Route path="/contact" element={
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Contact />
+              </motion.div>
+            } />
+            <Route path="/request-proposal" element={
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <RequestProposal />
+              </motion.div>
+            } />
+            <Route path="/proposal-form" element={
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <ProposalForm />
+              </motion.div>
+            } />
 
-          {/* Admin Login - No Layout */}
-          <Route path="/admin/login" element={<PageWrapper><Login /></PageWrapper>} />
+            {/* Admin Login - No Layout */}
+            <Route path="/admin/login" element={
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Login />
+              </motion.div>
+            } />
 
-          {/* Protected Admin Routes - Wrapped in AdminLayout */}
-          <Route element={<ProtectedRoute />}>
-            <Route path="/admin" element={<AdminLayout><PageWrapper><Dashboard /></PageWrapper></AdminLayout>} />
-            <Route path="/admin/projects" element={<AdminLayout><PageWrapper><ManageProjects /></PageWrapper></AdminLayout>} />
-            <Route path="/admin/services" element={<AdminLayout><PageWrapper><ManageServices /></PageWrapper></AdminLayout>} />
-            <Route path="/admin/testimonials" element={<AdminLayout><PageWrapper><ManageTestimonials /></PageWrapper></AdminLayout>} />
-            <Route path="/admin/leads" element={<AdminLayout><PageWrapper><ViewLeads /></PageWrapper></AdminLayout>} />
-          </Route>
-        </Routes>
+            {/* Protected Admin Routes - Wrapped in AdminLayout */}
+            <Route element={<ProtectedRoute />}>
+              <Route path="/admin" element={<AdminLayout><motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}><Dashboard /></motion.div></AdminLayout>} />
+              <Route path="/admin/projects" element={<AdminLayout><motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}><ManageProjects /></motion.div></AdminLayout>} />
+              <Route path="/admin/services" element={<AdminLayout><motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}><ManageServices /></motion.div></AdminLayout>} />
+              <Route path="/admin/testimonials" element={<AdminLayout><motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}><ManageTestimonials /></motion.div></AdminLayout>} />
+              <Route path="/admin/leads" element={<AdminLayout><motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}><ViewLeads /></motion.div></AdminLayout>} />
+            </Route>
+          </Routes>
+        </AnimatePresence>
       </main>
 
       {/* Only show public footer on non-admin pages */}

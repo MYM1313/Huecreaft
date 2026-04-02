@@ -260,7 +260,7 @@ const About = () => {
               <motion.div 
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-premium-lg group border border-luxury-divider inner-highlight-dark"
+                className="relative aspect-[4/5] rounded-[3.5rem] overflow-hidden shadow-premium-lg group border border-luxury-divider inner-highlight-dark"
               >
                 <img 
                   src="https://images.unsplash.com/photo-1504307651254-35680f356f12?q=80&w=800&h=1000&auto=format&fit=crop" 
@@ -293,7 +293,7 @@ const About = () => {
               <FadeInWhenVisible key={item.title} delay={index * 0.1}>
                 <motion.div
                   whileHover={{ y: -5, scale: 1.02 }}
-                  className="group relative rounded-[2rem] overflow-hidden shadow-premium-md hover:shadow-premium-xl transition-all duration-500 h-[320px] md:h-[380px] flex flex-col justify-end"
+                  className="group relative rounded-[3.5rem] overflow-hidden shadow-premium-md hover:shadow-premium-xl transition-all duration-500 h-[320px] md:h-[380px] flex flex-col justify-end"
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0">
@@ -310,7 +310,7 @@ const About = () => {
 
                   {/* Content */}
                   <div className="relative z-10 p-6 md:p-8 flex flex-col gap-4 transform transition-transform duration-500 group-hover:-translate-y-2">
-                    <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-luxury-gold shadow-premium-sm">
+                    <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-luxury-gold shadow-premium-sm">
                       <item.icon className="w-5 h-5" />
                     </div>
                     <div>
@@ -347,14 +347,14 @@ const About = () => {
               <FadeInWhenVisible key={step.title} delay={index * 0.15} direction="up">
                 <motion.div 
                   whileHover={{ y: -5, scale: 1.02 }}
-                  className="relative group p-8 md:p-10 rounded-[2rem] bg-gradient-to-br from-luxury-blue-mid to-luxury-ink border border-white/10 shadow-premium-lg overflow-hidden h-full flex flex-col justify-between"
+                  className="relative group p-8 md:p-10 rounded-[3.5rem] bg-gradient-to-br from-luxury-blue-mid to-luxury-ink border border-white/10 shadow-premium-lg overflow-hidden h-full flex flex-col justify-between"
                 >
                   {/* Ambient Glow */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-luxury-gold/20 blur-[50px] rounded-full pointer-events-none group-hover:bg-luxury-gold/30 transition-colors duration-500" />
                   
                   {/* Step Number */}
                   <div className="relative z-10 flex justify-between items-start mb-8">
-                    <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-inner">
+                    <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shadow-inner">
                       <span className="text-luxury-gold font-bold text-lg">0{index + 1}</span>
                     </div>
                     {/* Decorative Line */}
@@ -437,7 +437,7 @@ const About = () => {
                   <motion.div
                     whileHover={{ y: -8 }}
                     whileTap={{ scale: 0.98 }}
-                    className="relative aspect-square p-8 md:p-10 rounded-[2rem] bg-white border border-luxury-divider shadow-premium-md flex flex-col items-start justify-center text-left group transition-all duration-500 overflow-hidden h-full will-change-[transform,box-shadow]"
+                    className="relative aspect-square p-8 md:p-10 rounded-[3rem] bg-white border border-luxury-divider shadow-premium-md flex flex-col items-start justify-center text-left group transition-all duration-500 overflow-hidden h-full will-change-[transform,box-shadow]"
                   >
                     {/* Subtle Golden Gradient Background Layer */}
                     <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -472,86 +472,87 @@ const About = () => {
       </section>
 
       {/* [6] SAFETY – TRUST STRIP */}
-      <section className="py-24 bg-white overflow-hidden relative border-y border-luxury-divider -mt-[62px] gpu-accelerate">
+      <section className="py-12 bg-white overflow-hidden relative border-y border-luxury-divider -mt-[62px] gpu-accelerate">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           <FadeInWhenVisible>
-            <motion.div 
-              whileHover={{ rotateX: 2, rotateY: -1, y: -5 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative bg-white/60 backdrop-blur-2xl rounded-[2.5rem] p-10 md:p-16 border border-white shadow-[0_20px_60px_-15px_rgba(26,46,71,0.1)] overflow-hidden perspective-1000"
-            >
-              {/* 3D Lighting/Shading */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-transparent to-white/30 pointer-events-none" />
-              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white to-transparent" />
-              
-              <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div className="relative panel-premium-navy rounded-[2.5rem] p-6 md:p-10 overflow-hidden border border-white/10 shadow-premium-lg will-change-transform group">
+              {/* Continuous Lighting Effect */}
+              <motion.div 
+                animate={{ x: ["-100%", "200%"] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "linear", repeatDelay: 2 }}
+                className="absolute top-0 bottom-0 w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 pointer-events-none z-0"
+              />
+              <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div className="text-center lg:text-left flex-shrink-0">
-                  <h2 className="font-serif text-3xl md:text-4xl text-luxury-blue-mid font-bold mb-3">Safety & Certifications</h2>
-                  <p className="text-luxury-gold text-xs md:text-sm tracking-[0.2em] uppercase font-bold">Your Trust is Our Priority</p>
+                  <h2 className="font-serif text-2xl md:text-3xl text-white font-bold mb-2 group-hover:text-luxury-gold transition-colors duration-500">Safety & Certifications</h2>
+                  <p className="text-luxury-gold text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold">Your Trust is Our Priority</p>
                 </div>
                 
-                <div className="flex flex-wrap justify-center lg:justify-end gap-8 md:gap-12 w-full">
+                <div className="flex flex-wrap justify-center lg:justify-end gap-6 md:gap-10 w-full">
                   {certifications.map((cert) => (
-                    <div key={cert.name} className="flex flex-col items-center gap-4 group w-24">
-                      <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center border border-luxury-divider shadow-premium-md transition-all duration-500 group-hover:shadow-premium-lg group-hover:-translate-y-2 group-hover:border-luxury-gold/30 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <cert.icon className="w-8 h-8 text-luxury-blue-mid group-hover:text-luxury-gold transition-colors relative z-10" strokeWidth={1.5} />
+                    <div key={cert.name} className="flex flex-col items-center gap-3 group/cert w-20">
+                      <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 shadow-premium-sm transition-all duration-500 group-hover/cert:shadow-premium-md group-hover/cert:-translate-y-2 group-hover/cert:border-luxury-gold/30 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold/5 to-transparent opacity-0 group-hover/cert:opacity-100 transition-opacity duration-500" />
+                        <cert.icon className="w-6 h-6 text-white group-hover/cert:text-luxury-gold transition-colors relative z-10" strokeWidth={1.5} />
                       </div>
-                      <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-luxury-gray text-center group-hover:text-luxury-blue-mid transition-colors leading-tight">{cert.name}</span>
+                      <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-white/70 text-center group-hover/cert:text-white transition-colors leading-tight">{cert.name}</span>
                     </div>
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           </FadeInWhenVisible>
         </div>
       </section>
 
       {/* [7] SERVICE AREA – MINIMAL */}
-      <section className="py-24 md:py-32 bg-white relative overflow-hidden -mt-[56px] gpu-accelerate">
+      <section className="py-12 md:py-16 bg-white relative overflow-hidden -mt-[56px] gpu-accelerate">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 relative z-10">
           <FadeInWhenVisible>
-            <div className="relative bg-white rounded-3xl p-8 md:p-10 border border-luxury-divider shadow-[0_30px_80px_-15px_rgba(0,0,0,0.15)] hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.2)] transition-shadow duration-500 overflow-hidden group">
-              {/* Subtle top reflection */}
-              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-luxury-gold/30 to-transparent opacity-80" />
-              
-              <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8">
-                <div className="flex-shrink-0 w-16 h-16 rounded-[1.25rem] bg-gradient-to-br from-luxury-blue-ultra to-white text-luxury-blue-mid flex items-center justify-center border border-luxury-divider shadow-sm group-hover:scale-105 transition-transform duration-500">
-                  <MapPin className="w-8 h-8" strokeWidth={1.5} />
+            <div className="relative panel-premium-navy rounded-3xl p-6 md:p-8 overflow-hidden group border border-white/10 shadow-premium-lg will-change-transform">
+              {/* Continuous Lighting Effect */}
+              <motion.div 
+                animate={{ x: ["-100%", "200%"] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "linear", repeatDelay: 2 }}
+                className="absolute top-0 bottom-0 w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 pointer-events-none z-0"
+              />
+              <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 relative z-10">
+                <div className="flex-shrink-0 w-12 h-12 rounded-[1.25rem] bg-white/10 text-white flex items-center justify-center border border-white/20 shadow-premium-sm group-hover:scale-105 transition-transform duration-500">
+                  <MapPin className="w-6 h-6 text-luxury-gold" strokeWidth={1.5} />
                 </div>
                 
                 <div className="text-center sm:text-left flex-1">
-                  <h2 className="font-serif text-2xl md:text-3xl font-bold text-luxury-ink mb-2 tracking-tight">
+                  <h2 className="font-serif text-xl md:text-2xl font-bold text-white mb-1 tracking-tight group-hover:text-luxury-gold transition-colors duration-500">
                     Service Regions
                   </h2>
-                  <p className="text-sm md:text-base text-luxury-gray font-light mb-5">
+                  <p className="text-xs md:text-sm text-white/70 font-light mb-3">
                     Delivering master-level craftsmanship across the greater region.
                   </p>
                   
-                  <div className="grid grid-cols-2 gap-y-6 gap-x-4 text-[10px] md:text-xs font-bold uppercase tracking-wider text-luxury-blue-mid">
+                  <div className="grid grid-cols-2 gap-y-6 gap-x-4 text-[10px] md:text-xs font-bold uppercase tracking-wider text-luxury-gold">
                     <div className="flex items-center gap-3 group/item">
-                      <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-luxury-blue-ultra border border-luxury-divider text-luxury-gold group-hover/item:bg-luxury-gold group-hover/item:text-white transition-all duration-300 shadow-sm">
+                      <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/10 border border-white/20 text-luxury-gold group-hover/item:bg-luxury-gold group-hover/item:text-white transition-all duration-300 shadow-premium-sm">
                         <MapPin className="h-3 w-3" strokeWidth={2.5} />
                       </div>
-                      <span className="truncate">Calgary</span>
+                      <span className="truncate text-white group-hover/item:translate-x-1 transition-transform duration-300">Calgary</span>
                     </div>
                     <div className="flex items-center gap-3 group/item">
-                      <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-luxury-blue-ultra border border-luxury-divider text-luxury-gold group-hover/item:bg-luxury-gold group-hover/item:text-white transition-all duration-300 shadow-sm">
+                      <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/10 border border-white/20 text-luxury-gold group-hover/item:bg-luxury-gold group-hover/item:text-white transition-all duration-300 shadow-premium-sm">
                         <MapPin className="h-3 w-3" strokeWidth={2.5} />
                       </div>
-                      <span className="truncate">Airdrie</span>
+                      <span className="truncate text-white group-hover/item:translate-x-1 transition-transform duration-300">Airdrie</span>
                     </div>
                     <div className="flex items-center gap-3 group/item">
-                      <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-luxury-blue-ultra border border-luxury-divider text-luxury-gold group-hover/item:bg-luxury-gold group-hover/item:text-white transition-all duration-300 shadow-sm">
+                      <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/10 border border-white/20 text-luxury-gold group-hover/item:bg-luxury-gold group-hover/item:text-white transition-all duration-300 shadow-premium-sm">
                         <MapPin className="h-3 w-3" strokeWidth={2.5} />
                       </div>
-                      <span className="truncate">Chestermere</span>
+                      <span className="truncate text-white group-hover/item:translate-x-1 transition-transform duration-300">Chestermere</span>
                     </div>
                     <div className="flex items-center gap-3 group/item">
-                      <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-luxury-blue-ultra border border-luxury-divider text-luxury-gold group-hover/item:bg-luxury-gold group-hover/item:text-white transition-all duration-300 shadow-sm">
+                      <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/10 border border-white/20 text-luxury-gold group-hover/item:bg-luxury-gold group-hover/item:text-white transition-all duration-300 shadow-premium-sm">
                         <MapPin className="h-3 w-3" strokeWidth={2.5} />
                       </div>
-                      <span className="truncate">Greater Region</span>
+                      <span className="truncate text-white group-hover/item:translate-x-1 transition-transform duration-300">Greater Region</span>
                     </div>
                   </div>
                 </div>

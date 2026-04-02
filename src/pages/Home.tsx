@@ -648,49 +648,31 @@ const Home = () => {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            animate={{ 
-              y: [0, -10, 0],
-              rotateX: [0, 2, 0],
-              rotateY: [0, -2, 0]
-            }}
-            transition={{ 
-              y: {
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut"
-              },
-              rotateX: {
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut"
-              },
-              rotateY: {
-                duration: 7,
-                repeat: Infinity,
-                ease: "easeInOut"
-              },
-              opacity: { duration: 0.5, ease: "easeOut" },
-              initial: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
-            }}
             viewport={{ once: true, margin: "-100px" }}
             whileHover={{ y: -12, scale: 1.02, rotateX: 0, rotateY: 0 }}
-            className="relative bg-gradient-to-b from-white to-[#FFFEFA] rounded-[3.5rem] p-6 md:p-8 border border-luxury-divider/40 shadow-[inset_0_2px_10px_rgba(255,255,255,1),inset_0_-4px_12px_rgba(0,0,0,0.02)] transition-all duration-700 overflow-hidden group perspective-2000"
+            className="relative panel-premium-navy rounded-[3.5rem] p-6 md:p-8 overflow-hidden group perspective-2000 will-change-transform"
           >
+            {/* Continuous Lighting Effect */}
+            <motion.div 
+              animate={{ x: ["-100%", "200%"] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "linear", repeatDelay: 2 }}
+              className="absolute top-0 bottom-0 w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 pointer-events-none z-0"
+            />
             <div className="relative z-10 flex flex-col sm:flex-row items-center gap-6 md:gap-8">
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-luxury-blue-ultra to-white text-luxury-blue-mid flex items-center justify-center border border-luxury-divider shadow-premium-sm group-hover:scale-110 group-hover:rotate-3 transition-transform duration-700">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/10 text-white flex items-center justify-center border border-white/20 shadow-premium-sm group-hover:scale-110 group-hover:rotate-3 transition-transform duration-700">
                 <MapPin className="w-6 h-6 text-luxury-gold" strokeWidth={1.5} />
-                <div className="absolute inset-0 bg-luxury-gold/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute inset-0 bg-luxury-gold/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               </div>
               
               <div className="text-center sm:text-left flex-1">
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-luxury-ink mb-1 tracking-tight group-hover:text-luxury-blue-mid transition-colors duration-500">
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-1 tracking-tight group-hover:text-luxury-gold transition-colors duration-500">
                   Service Regions
                 </h2>
-                <p className="text-xs md:text-sm text-luxury-gray font-light mb-4 leading-relaxed">
+                <p className="text-xs md:text-sm text-white/70 font-light mb-4 leading-relaxed">
                   Delivering master-level craftsmanship across the greater region.
                 </p>
                 
-                <div className="grid grid-cols-2 gap-y-3 gap-x-4 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-blue-mid">
+                <div className="grid grid-cols-2 gap-y-3 gap-x-4 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-gold">
                   {[
                     { name: "Calgary" },
                     { name: "Airdrie" },
@@ -698,10 +680,10 @@ const Home = () => {
                     { name: "Greater Region" }
                   ].map((region) => (
                     <div key={region.name} className="flex items-center gap-2 group/item">
-                      <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-luxury-blue-ultra border border-luxury-divider text-luxury-gold group-hover/item:bg-luxury-gold group-hover/item:text-white group-hover/item:border-luxury-gold transition-all duration-500 shadow-premium-sm">
+                      <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/10 border border-white/20 text-luxury-gold group-hover/item:bg-luxury-gold group-hover/item:text-white group-hover/item:border-luxury-gold transition-all duration-500 shadow-premium-sm">
                         <MapPin className="h-2.5 w-2.5" strokeWidth={2.5} />
                       </div>
-                      <span className="truncate group-hover/item:translate-x-1 transition-transform duration-300">{region.name}</span>
+                      <span className="truncate text-white group-hover/item:translate-x-1 transition-transform duration-300">{region.name}</span>
                     </div>
                   ))}
                 </div>
@@ -717,38 +699,19 @@ const Home = () => {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            animate={{ 
-              y: [0, 8, 0],
-              rotateX: [0, -1, 0],
-              rotateY: [0, 1, 0]
-            }}
-            transition={{ 
-              y: {
-                duration: 7,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0.2
-              },
-              rotateX: {
-                duration: 9,
-                repeat: Infinity,
-                ease: "easeInOut"
-              },
-              rotateY: {
-                duration: 10,
-                repeat: Infinity,
-                ease: "easeInOut"
-              },
-              opacity: { duration: 0.5, ease: "easeOut" },
-              initial: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
-            }}
             viewport={{ once: true, margin: "-100px" }}
             whileHover={{ y: -10, scale: 1.01, rotateX: 0, rotateY: 0 }}
-            className="relative bg-gradient-to-b from-white to-[#FFFEFA] rounded-[3.5rem] p-6 md:p-8 border border-luxury-divider/40 shadow-[inset_0_2px_10px_rgba(255,255,255,1),inset_0_-4px_12px_rgba(0,0,0,0.02)] transition-all duration-700 overflow-hidden perspective-2000"
+            className="relative panel-premium-navy rounded-[3.5rem] p-6 md:p-8 overflow-hidden perspective-2000 will-change-transform"
           >
+            {/* Continuous Lighting Effect */}
+            <motion.div 
+              animate={{ x: ["-100%", "200%"] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "linear", repeatDelay: 3 }}
+              className="absolute top-0 bottom-0 w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 pointer-events-none z-0"
+            />
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-10">
               <div className="text-center lg:text-left flex-shrink-0">
-                <h2 className="font-serif text-2xl md:text-3xl text-luxury-blue-mid font-bold mb-1 tracking-tight leading-tight">Safety & Certifications</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-white font-bold mb-1 tracking-tight leading-tight">Safety & Certifications</h2>
                 <p className="text-luxury-gold text-[10px] md:text-xs tracking-[0.3em] uppercase font-bold">Your Trust is Our Priority</p>
               </div>
               
@@ -760,11 +723,11 @@ const Home = () => {
                   { name: 'CPR', icon: ShieldCheck }
                 ].map((cert) => (
                   <div key={cert.name} className="flex flex-col items-center gap-3 group w-20">
-                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white flex items-center justify-center border border-luxury-divider shadow-premium-sm transition-all duration-700 group-hover:shadow-premium-md group-hover:-translate-y-2 group-hover:rotate-3 group-hover:border-luxury-gold/40 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                      <cert.icon className="w-6 h-6 md:w-7 md:h-7 text-luxury-blue-mid group-hover:text-luxury-gold transition-colors duration-500 relative z-10" strokeWidth={1.2} />
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/10 flex items-center justify-center border border-white/20 shadow-premium-sm transition-all duration-700 group-hover:shadow-premium-md group-hover:-translate-y-2 group-hover:rotate-3 group-hover:border-luxury-gold/40 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold/[0.1] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                      <cert.icon className="w-6 h-6 md:w-7 md:h-7 text-white group-hover:text-luxury-gold transition-colors duration-500 relative z-10" strokeWidth={1.2} />
                     </div>
-                    <span className="text-[8px] md:text-[9px] font-bold uppercase tracking-[0.2em] text-luxury-gray text-center group-hover:text-luxury-blue-mid transition-colors duration-500 leading-tight">{cert.name}</span>
+                    <span className="text-[8px] md:text-[9px] font-bold uppercase tracking-[0.2em] text-white/70 text-center group-hover:text-white transition-colors duration-500 leading-tight">{cert.name}</span>
                   </div>
                 ))}
               </div>

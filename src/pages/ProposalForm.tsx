@@ -117,7 +117,7 @@ const PremiumInput = ({
       </label>
       <div
         className={cn(
-          "relative rounded-[18px] md:rounded-[22px] border transition-all duration-500 luxury-easing bg-luxury-surface-warm/40 flex items-center overflow-hidden backdrop-blur-sm",
+          "relative rounded-[18px] md:rounded-[22px] border transition-all duration-500 luxury-easing bg-luxury-surface-warm/40 flex items-center overflow-hidden",
           isFocused 
             ? "border-luxury-gold ring-4 ring-luxury-gold/10 -translate-y-[1px] shadow-premium-md bg-white" 
             : "border-luxury-divider/60",
@@ -373,7 +373,7 @@ Notes: ${data.notes || 'None'}
             className="relative z-10"
           >
             <div className="mb-3">
-              <span className="text-[7px] md:text-[8px] font-bold uppercase tracking-[0.4em] text-luxury-gold bg-white/80 backdrop-blur-md px-4 py-2 rounded-full border border-luxury-divider/40 shadow-premium-sm">
+              <span className="text-[7px] md:text-[8px] font-bold uppercase tracking-[0.4em] text-luxury-gold bg-white/80 px-4 py-2 rounded-full border border-luxury-divider/40 shadow-premium-sm">
                 Bespoke Estimates
               </span>
             </div>
@@ -434,7 +434,7 @@ Notes: ${data.notes || 'None'}
               {/* PROGRESS INDICATOR - Moved outside panel, slightly larger */}
               <div className="mb-8 relative z-10 w-full max-w-2xl mx-auto">
                 <div className="flex justify-center mb-6">
-                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-luxury-divider/30 shadow-premium-sm">
+                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-luxury-divider/30 shadow-premium-sm">
                     <Sparkles className="h-3 w-3 text-luxury-gold animate-pulse" />
                     <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-luxury-gold">
                       Quick 60-second request
@@ -509,7 +509,7 @@ Notes: ${data.notes || 'None'}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="relative rounded-[2rem] md:rounded-[3rem] bg-white/95 backdrop-blur-xl border border-luxury-divider/40 shadow-[0_20px_60px_-15px_rgba(26,46,71,0.08)] max-w-2xl mx-auto overflow-hidden h-[540px] md:h-[520px] flex flex-col justify-center"
+              className="relative rounded-[2rem] md:rounded-[3rem] bg-white/95 border border-luxury-divider/40 shadow-[0_20px_60px_-15px_rgba(26,46,71,0.08)] max-w-2xl mx-auto overflow-hidden h-[540px] md:h-[520px] flex flex-col justify-center"
             >
               <div className="p-6 md:p-10 relative z-10 w-full">
                 <AnimatePresence mode="wait" custom={1}>
@@ -757,7 +757,7 @@ Notes: ${data.notes || 'None'}
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="group flex items-center justify-center gap-2 px-4 py-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-luxury-gray hover:text-luxury-ink transition-all duration-500 luxury-easing bg-white/50 backdrop-blur-sm rounded-full border border-luxury-divider/20 hover:bg-white hover:shadow-sm"
+                  className="group flex items-center justify-center gap-2 px-4 py-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-luxury-gray hover:text-luxury-ink transition-all duration-500 luxury-easing bg-white/50 rounded-full border border-luxury-divider/20 hover:bg-white hover:shadow-sm"
                 >
                   <ArrowLeft className="h-4 w-4 md:h-4 md:w-4 transition-transform duration-500 luxury-easing group-hover:-translate-x-1.5" />
                   Back
